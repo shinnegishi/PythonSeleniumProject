@@ -18,7 +18,7 @@ service = Service('/Users/suc806/Project/Python/chromium_project/chromedriver.ex
 service.start()
 driver = webdriver.Remote(service.service_url,desired_capabilities=chrome_options.to_capabilities())
 #driver = webdriver.Remote(service.service_url,capabilities)
-driver.get('http://www.yahoo.co.jp/');
+driver.get('http://www.yahoo.co.jp/')
 time.sleep(5) # Let the user actually see something!
 driver.quit()
 
@@ -29,7 +29,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys  
 from selenium.webdriver.chrome.options import Options
 
-service = webdriver.chrome.service.Service(os.path.abspath(Ågchromedriver"))  
+service = webdriver.chrome.service.Service(os.path.abspath(ÔøΩgchromedriver"))  
 service.start()
 
 chrome_options = Options()  
@@ -51,7 +51,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")  
 chrome_options.binary_location = '/Applications/Google Chrome   Canary.app/Contents/MacOS/Google Chrome Canary'`    
 
-driver = webdriver.Chrome(executable_path=os.path.abspath(Ågchromedriver"),   chrome_options=chrome_options)  
+driver = webdriver.Chrome(executable_path=os.path.abspath(ÔøΩgchromedriver"),   chrome_options=chrome_options)  
 driver.get("http://www.duo.com")`  
 
 magnifying_glass = driver.find_element_by_id("js-open-icon")  
