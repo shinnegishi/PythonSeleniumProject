@@ -19,8 +19,6 @@ timestamp = datetime.datetime.now().strftime('%y%m%d%H%M')
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 
-
-#browser = webdriver.Chrome(executable_path='/mnt/c/workspace/pydev/chromedriver.exe')
 capabilities = DesiredCapabilities.CHROME
 service = Service('./chromedriver.exe')
 service.start()
