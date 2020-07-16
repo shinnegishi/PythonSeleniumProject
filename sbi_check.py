@@ -10,6 +10,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 #import pandas
 import time
+import getpass
 from selenium.webdriver.chrome.options import Options
 
 timestamp = datetime.datetime.now().strftime('%y%m%d%H%M')
@@ -25,8 +26,8 @@ service = Service('./chromedriver.exe')
 service.start()
 #browser = webdriver.Remote(service.service_url,capabilities)
 browser = webdriver.Remote(service.service_url,desired_capabilities=chrome_options.to_capabilities())
-username = raw_input("Username: ")
-password = raw_input("Password: ")
+username = getpass.getpass(prompt="Username: ")
+password = getpass.getpass(prompt="Password: ") 
 try:
     browser.get('https://www.sbisec.co.jp/ETGate')
     username_field = browser.find_element_by_xpath('/html/body/table/tbody/tr[1]/td[2]/form/div/div/div/dl/dd[1]/div/input')
