@@ -13,7 +13,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 #import pandas
 import time
 from selenium.webdriver.chrome.options import Options
-from pathlib import Path
+
 import glob
 import pandas as pd
 from os.path import expanduser
@@ -21,7 +21,7 @@ from os.path import expanduser
 PWD = os.getcwd()
 HOME_DIR = expanduser("~")
 
-RIYOUSYA_LIST_KEYWORD = "riyousha_list"
+RIYOUSYA_LIST_KEYWORD = "riyousya_list"
 EXCEL_UPDATE_RIYOUSYA_INFO_ABSOLUTE_PATH = os.getcwd()+"\update_riyousya_info.xlsx"
 
 #Update Riyousya File
@@ -105,9 +105,12 @@ try:
     time.sleep(5)
 
     #コピペ操作
-    keyboard.press_and_release('wondows+e, ctrl+l, backspace')
+    keyboard.press_and_release('windows+e')
+    time.sleep(5)
+    keyboard.press_and_release('ctrl+l, backspace')
     time.sleep(5)
     keyboard.write(HOME_DIR+"\Downloads")
+    time.sleep(5)
     keyboard.press_and_release('enter')
     time.sleep(5)
     keyboard.press_and_release('tab')
