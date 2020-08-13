@@ -3,6 +3,7 @@ import time
 
 from os.path import expanduser
 
+PWD = os.getcwd()
 HOME_DIR = expanduser("~")
 RIYOUSYA_LIST_KEYWORD = "riyousha_list"
 
