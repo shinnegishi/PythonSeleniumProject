@@ -41,7 +41,6 @@ def copy_and_paste():
     keyboard.press_and_release('tab')
     time.sleep(3)
     keyboard.press_and_release('ctrl+v')
-    print("Finished!!!")
 
 if __name__ == '__main__':
     copy_and_paste()
